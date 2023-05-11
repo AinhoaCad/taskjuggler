@@ -161,7 +161,7 @@ task WMGame "Web & Mobile Game" {
   task tmobF "Mobile Front End" {
     purge chargeset
     chargeset mFront
-    responsible dev3
+    responsible dev4
     depends WMGame.tback.tBEd
     task tGUId "Diseño movil" {
       effort 5d
@@ -175,7 +175,7 @@ task WMGame "Web & Mobile Game" {
     }
     task tFEc "Construccion del Frontend movil" {
       effort 13d
-      allocate dev2, dev3
+      allocate dev2, dev4
       depends WMGame.twebF.tGUId
     }
     task tFEt "Test del Frontend movil" {
