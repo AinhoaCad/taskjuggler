@@ -147,27 +147,34 @@ task WMGame "Web & Mobile Game" {
     }    
   }
 
+  task Cloud "Despliegue en la nube del backend" {
+    purge chargeset
+    chargeset mFront
+    responsible dev3
+    depends WMGame.tmobF.tFEt
+  }
+
   task tmobF "Mobile Front End" {
     purge chargeset
     chargeset mFront
     responsible dev3
     depends WMGame.tback.tBEd
-    task tGUId "Mobile GUI Design" {
-      effort 9d
-      actual:effort 15d
+    task tGUId "Diseño movil" {
+      effort 5d
+      actual:effort 10d
       allocate dev3
-      journalentry 2023-04-11 "Problems with the GUI design tool" {
+      journalentry 2023-04-11 "Problemas con el entorno" {
         author dev3
         alert yellow
-        summary "The tool used for the GUI design has given me a lot of problems. I recommend to look for other one."
+        summary "He cambiado de entorno debido a problemas."
       }
     }
-    task tFEc "Mobile Front End Construction " {
-      effort 15d
+    task tFEc "Construccion del Frontend movil" {
+      effort 13d
       allocate dev2, dev3
       depends WMGame.twebF.tGUId
     }
-    task tFEt "Mobile Front End Test" {
+    task tFEt "Test del Frontend movil" {
       effort 6d
       allocate dev1
       depends WMGame.twebF.tFEc
