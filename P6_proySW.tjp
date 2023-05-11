@@ -166,7 +166,7 @@ task WMGame "Web & Mobile Game" {
     task tGUId "Diseño movil" {
       effort 5d
       actual:effort 10d
-      allocate dev3
+      allocate dev4
       journalentry 2023-05-11 "Problemas con el entorno" {
         author dev3
         alert yellow
