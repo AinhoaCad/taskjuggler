@@ -168,7 +168,7 @@ task WMGame "Web & Mobile Game" {
       actual:effort 10d
       allocate dev4
       journalentry 2023-05-11 "Problemas con el entorno" {
-        author dev3
+        author dev4
         alert yellow
         summary "He cambiado de entorno debido a problemas."
       }
@@ -269,7 +269,7 @@ textreport frame "" {
   }
   textreport Pini "overviewPIni" {
     formats html
-    center '<[report id="overview"]>'
+    center '<[report id="overviewPIni"]>'
   }
 
   textreport "Status" {
